@@ -1,0 +1,27 @@
+name = "telegram-ai-worker"
+main = "main.py"
+compatibility_date = "2026-10-21"
+compatibility_flags = ["python_workers"]
+workers_dev = true
+
+# Replace these placeholder IDs before deployment.
+[[kv_namespaces]]
+binding = "STATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "telegram-ai-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[ai]
+binding = "AI"
+
+[triggers]
+# UTC schedule. Reminder processing is not enabled in this starter yet.
+crons = ["*/5 * * * *"]
+
+[vars]
+# Non-secret settings only. Never place tokens or API keys here.
+APP_ENV = "production"

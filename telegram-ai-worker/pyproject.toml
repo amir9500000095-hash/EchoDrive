@@ -1,0 +1,13 @@
+[project]
+name = "telegram-ai-worker"
+version = "0.1.0"
+description = "Persian-friendly Telegram bot on Cloudflare Python Workers"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.0", "workers-py"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

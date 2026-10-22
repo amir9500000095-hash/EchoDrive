@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+uv.lock
